@@ -45,3 +45,8 @@
   font-size: 1.6rem;
   color: var(--color-brand--1);
 }
+
+::-webkit-scrollbar {
+  width: 0; /* ширина скроллбара = 0 */
+  background: transparent; /* фон прозрачен */
+}
