@@ -2,7 +2,7 @@ import { createContext, useContext, useReducer } from "react";
 
 const AuthContext = createContext();
 
-initialState = {
+const initialState = {
   user: null,
   isAuthenticated: false,
 };
@@ -25,7 +25,7 @@ const FAKE_USER = {
   avatar: "https://i.pravatar.cc/100?u=zz",
 };
 
-function AuthContext({ children }) {
+function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
     reducer,
     initialState
@@ -56,4 +56,4 @@ function useAuth() {
   return context;
 }
 
-export { useAuth, AuthContext };
+export { useAuth, AuthProvider };
